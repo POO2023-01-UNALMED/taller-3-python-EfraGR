@@ -8,7 +8,7 @@ class Control:
     
     def enlazar(self,televisor) -> None:
         self._tv = televisor
-        televisor.setControl = self
+        televisor.setControl(self)
     
     
     def turnOn(self) -> None:
