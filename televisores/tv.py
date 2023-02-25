@@ -1,7 +1,7 @@
 # from marca import Marca
 # from control import Control
 class TV:
-    numTV =0
+    _numTV =0
     
     def __init__(self,marca,estado:bool) -> None:
         self._marca = marca
@@ -11,7 +11,7 @@ class TV:
         self._volumen = 1
         self._control = None
         
-        TV.numTV+=1
+        TV.setNumTV(TV.getNumTV()+1)
         
     def getMarca(self):
         return self._marca
@@ -51,11 +51,11 @@ class TV:
         
     @classmethod
     def getNumTV(cls):
-        return TV.getNumTV
+        return cls._numTV
     
     @classmethod
     def setNumTV(cls,tv):
-        TV.getNumTV = tv
+        cls._numTV = tv
     
     
     
