@@ -4,8 +4,8 @@ class Marca:
         self._nombre = nombre
     
     def getNombre(self) -> str:
-        return self.nombre
+        return self._nombre
     
     def setNombre(self,newNombre:str) -> None:
-        self.nombre = newNombre
+        self._nombre = newNombre
                

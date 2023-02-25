@@ -1,12 +1,12 @@
 
-from tv import TV
+# from tv import TV
 
 class Control:
     
     def __init__(self) -> None:
         self._tv = None
     
-    def enlazar(self,televisor:TV) -> None:
+    def enlazar(self,televisor) -> None:
         self._tv = televisor
         televisor.setControl = self
     
@@ -34,9 +34,9 @@ class Control:
         self._tv.setCanal(canal)
     
     
-    def setTv(self,tv:TV) -> None:
-        self._tv = TV
-    def getTv(self) -> TV:
+    def setTv(self,tv) -> None:
+        self._tv = tv
+    def getTv(self):
         return self._tv
     
         

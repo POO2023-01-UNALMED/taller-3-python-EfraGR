@@ -1,9 +1,9 @@
-from marca import Marca
-from control import Control
+# from marca import Marca
+# from control import Control
 class TV:
     numTV =0
     
-    def __init__(self,marca:Marca,estado:bool) -> None:
+    def __init__(self,marca,estado:bool) -> None:
         self._marca = marca
         self._canal = 1
         self._precio = 500
@@ -13,37 +13,37 @@ class TV:
         
         TV.numTV+=1
         
-    def getMarca(self) -> Marca:
-        return self.marca
+    def getMarca(self):
+        return self._marca
     
     def setMarca(self, marca) -> None:
-        self.marca = marca
+        self._marca = marca
     
-    def getControl(self) -> Control:
-        return self.control
+    def getControl(self):
+        return self._control
     
     def setControl(self, control) -> None:
-        self.control = control
+        self._control = control
     
     def getPrecio(self) -> int:
-        return self.precio
+        return self._precio
     
     def setPrecio(self, precio) -> None:
-        self.precio = precio
+        self._precio = precio
     
     def getVolumen(self) -> int:
-        return self.volumen
+        return self._volumen
     
     def setVolumen(self, volumen) -> None:
         if (self._estado and self._volumen>=0 and self._volumen<=7):
-            self.volumen = volumen
+            self._volumen = volumen
     
     def getCanal(self) -> int:
-        return self.canal
+        return self._canal
     
     def setCanal(self, canal)-> None:
         if (self._estado and self._canal>=1 and self._canal<=120): 
-            self.canal = canal
+            self._canal = canal
         
     def getEstado(self) -> bool:
         return self._estado
